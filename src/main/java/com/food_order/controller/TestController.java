@@ -1,0 +1,17 @@
+// src/main/java/com/example/yemeksiparis/controller/TestController.java
+
+package com.food_order.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/test")
+public class TestController {
+    
+    @GetMapping("/hello")
+    public String test() {
+        return "Hello, API is working!";
+    }
+}
