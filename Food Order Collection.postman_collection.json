@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "b6fed600-96a2-4a83-abd9-b504c26d385e",
+		"name": "Food Order Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42462229"
+	},
+	"item": [
+		{
+			"name": "List All Food",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/food",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Food Type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dummy Food\",\r\n    \"price\": 99.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/food",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order?customerName=Dummy Name&foodName=Dummy Food",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order"
+					],
+					"query": [
+						{
+							"key": "customerName",
+							"value": "Dummy Name"
+						},
+						{
+							"key": "foodName",
+							"value": "Dummy Food"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Order By Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order/customer?customerName=Merve Vahide",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "customerName",
+							"value": "Merve Vahide"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
