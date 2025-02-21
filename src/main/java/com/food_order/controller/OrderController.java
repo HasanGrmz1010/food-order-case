@@ -2,6 +2,7 @@ package com.food_order.controller;
 
 import java.util.*;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +32,8 @@ public class OrderController {
         if(food.isPresent()){
             return ResponseEntity.ok(orderService.createOrder(customerName, food.get()));
         }
-        return ResponseEntity.badRequest().body("FOOD NOT FOUND"); // SOR
+        
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("FOOD NOT FOUND");
     }
 
     @GetMapping("/customer")

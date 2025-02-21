@@ -16,7 +16,6 @@ public class Order {
     @JoinColumn(name = "food_id", nullable = false)
     private Food food;
 
-    // Constructors
     public Order() {}
 
     public Order(String customerName, Food food) {
@@ -24,7 +23,6 @@ public class Order {
         this.food = food;
     }
 
-    // Getters & Setters
     public Long getId() { return id; }
     public String getCustomerName() { return customerName; }
     public void setCustomerName(String customerName) { this.customerName = customerName; }

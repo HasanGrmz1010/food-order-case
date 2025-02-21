@@ -15,7 +15,6 @@ public class Food {
     @Column(nullable = false)
     private Double price;
 
-    // Constructors
     public Food() {}
 
     public Food(String name, Double price) {
@@ -23,7 +22,6 @@ public class Food {
         this.price = price;
     }
 
-    // Getters & Setters
     public Long getId() { return id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
